@@ -1,0 +1,265 @@
+url = "/"
+layout = "default"
+title = "Úvod"
+
+[collection slider]
+handle = "Slider\Slide"
+
+[global slider_settings]
+handle = "Slider\Settings"
+
+[collection partners]
+handle = "Partners\Partner"
+
+[collection portfolio_categories]
+handle = "Portfolio\Category"
+
+[blogCategories categories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = "novinky-kategorie"
+
+[Gallery gallery]
+gallery = "portfolio"
+imagesPerPage = 8
+==
+{% if slider.getIterator().count %}
+    <div class="{#container-fluid#} d-block d-md-block"> {# uncomment while slider with horizontal margin #}
+        <div class="slider-swiper-wrapper position-relative {#container-fluid#}"> {# uncomment while slider with horizontal margin #}
+            {% partial "_swiper/slider" slides=slider settings=slider_settings %}
+
+            <div class="gradient position-absolute start-0 top-0 w-100 h-100"></div>
+
+            <div class="info position-absolute start-50 translate-middle-x p-5 d-none d-md-block">
+                <p class="title fw-bold text-center text-body fs-1 mb-2">
+                    KOLOMÝ s.r.o.
+                </p>
+
+                <p class="heading h2 text-center mb-0">
+                    Zakázková CNC výroba
+                </p>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{% component "quicknews" %}
+
+<div class="container-fluid pt-5" id="sluzby">
+    <div class="container-lg pt-xl-4">
+        <h2 class="h1 text-center mb-4">
+            Služby
+        </h2>
+
+        <p class="mb-5 text-center">
+            Používáme kvalitní materiály a nástroje vyráběné v Evropě. Veškerá výroba probíhá na strojích japonské značky Mazak.
+        </p>
+
+        <div class="row row-cols-1 gy-4 row-cols-lg-3 gy-0 gx-xl-5 gx-xxl-7">
+            <div class="col">
+{#                <p class="text-center mb-3">#}
+{#                    <i class="ph ph-seal-check fs-1 text-primary"></i>#}
+{#                </p>#}
+
+                <h3 class="fw-bold text-center mb-3">
+                    CNC soustružení
+                </h3>
+
+                <p>
+                    Soustružíme nejrůznější materiály, s možností přídavného frézování.
+                </p>
+
+                <p>
+                    Soustružení materiálů až do průměru 65 mm na strojích:
+                </p>
+
+                <ul class="list-unstyled mt-4 mb-0 fs-4 text-dark d-flex flex-column gap-2">
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            CNC Mazak QT 250M
+                        </p>
+                    </li>
+
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            CNC Mazak Nexus 200M-500U
+                        </p>
+                    </li>
+
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            CNC Mazak Nexus 100 II
+                        </p>
+                    </li>
+
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            CNC Mazak QT 10
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+{#                <p class="text-center mb-3">#}
+{#                    <i class="ph ph-gauge fs-1 text-primary"></i>#}
+{#                </p>#}
+
+                <h3 class="fw-bold text-center mb-3">
+                    CNC frézování
+                </h3>
+
+                <p>
+                    Frézování je možné ve třech, ale i v pěti osách, k dispozici máme také modulární paletový systém.
+                </p>
+
+                <p>
+                    Tříosé i pětiosé frézování na strojích:
+                </p>
+
+                <ul class="list-unstyled mt-4 mb-0 fs-4 text-dark d-flex flex-column gap-2">
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            CNC Mazak Variaxis 500II-5X
+                        </p>
+                    </li>
+
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            CNC Mazak Variaxis 500-5X2PC
+                        </p>
+                    </li>
+
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            CNC Mazak VC Nexus 410A
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+{#                <p class="text-center mb-3">#}
+{#                    <i class="ph ph-hand-heart fs-1 text-primary"></i>#}
+{#                </p>#}
+
+                <h3 class="fw-bold text-center">
+                    Měření výrobků
+                </h3>
+
+                <p>
+                    Nabízíme možnost výrobky změřit pomocí 3D měřícího stroje značky Wenzel, a následné zhotovení protokolu s naměřenými hodnotami.
+                </p>
+
+                <p>
+                    Výrobky měříme na strojích:
+                </p>
+
+                <ul class="list-unstyled mt-4 mb-0 fs-4 text-dark d-flex flex-column gap-2">
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            Měřící stroj Wenzel 3D LH 500x600x400 mm
+                        </p>
+                    </li>
+
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            Projektor PARLEC P1550A-400-320
+                        </p>
+                    </li>
+
+                    <li class="d-flex align-items-center">
+                        <i class="ph ph-check-circle text-primary me-2 fs-2"></i>
+
+                        <p class="mb-0">
+                            Měřící projektor MITUTOYO PJ-A3010F-200
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-5" id="portfolio">
+    <div class="container-lg pt-xl-5">
+        <h2 class="h1 text-center mb-4">
+            Portfolio
+        </h2>
+
+        {% component "gallery" %}
+    </div>
+</div>
+
+<div class="container-fluid py-5 ps-md-0 pe-xl-0 overflow-hidden" id="o-nas">
+    <div class="container-fluid ps-md-0 pe-xl-0 py-xl-6">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col d-flex col-md-5 col-xl pe-xl-0">
+                <img src="{{ 'assets/images/about.jpg'|theme }}" alt="O nás" class="img-fluid rounded-end-3 object-fit-md-cover">
+            </div>
+
+            <div class="col mt-4 col-md-7 mt-md-0 d-md-flex align-items-md-center col-xl ps-xl-0">
+                <div class="my-md-4 mx-xl-5 px-xxl-5">
+                    <h2 class="h1 pb-2 mb-3">
+                        Rodinná tradice
+                    </h2>
+
+                    <p>
+                        Společnost byla založena panem Jířím Kolomým v roce 1993 pod názvem KOVOS. Od roku 2005 nese
+                        společnost jméno svého zakladatele. Firma si i dnes udržuje rodinnou tradici a vedení firmy
+                        převzala dcera pana Kolomého, paní Zdenka Hrochová.
+                    </p>
+
+                    <p class="mb-0">
+                        Přesnost a kvalita výrobků je na prvním místě a spokojenost zákazníků je prioritou. Od roku 2002
+                        spolupracujeme s firmami EU a jsme otevřeni novým obchodním příležitostem.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{#<div class="container-fluid py-5" id="partners">#}
+{#    <div class="container-lg pt-xl-4">#}
+{#        <h2 class="h1 text-center mb-4">#}
+{#            Partneři#}
+{#        </h2>#}
+
+{#        <div class="swiper partners-swiper partners">#}
+{#            <div class="swiper-wrapper">#}
+{#                {% for partner in partners %}#}
+{#                    <div class="swiper-slide">#}
+{#                        {% if partner.link %}#}
+{#                            <a href="{{ partner.link }}">#}
+{#                        {% endif %}#}
+{#                                <img src="{{ partner.logo.path }}" alt="{{ partner.logo.description }}" class="img-fluid">#}
+{#                        {% if partner.link %}#}
+{#                            </a>#}
+{#                        {% endif %}#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+
+{#            <div class="swiper-scrollbar"></div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}

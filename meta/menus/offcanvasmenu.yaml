@@ -1,0 +1,38 @@
+items:
+    -
+        title: Služby
+        type: url
+        url: '#sluzby'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Portfolio
+        type: url
+        url: '#portfolio'
+        code: references
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Rodinná tradice'
+        type: url
+        url: '#rodinna-tradice'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kontakt
+        type: url
+        url: '#kontakt'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Offcanvas Menu'
