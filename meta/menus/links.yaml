@@ -1,10 +1,22 @@
 items:
     -
+        title: 'Obchodní rejstřík'
+        type: url
+        url: 'https://or.justice.cz/ias/ui/rejstrik-%24firma?ico=25267531&jenPlatne=PLATNE&polozek=50&typHledani=STARTS_WITH'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '1'
+    -
         title: 'Nastavení cookies'
+        nesting: null
         type: page
+        url: null
         code: ''
         reference: '2'
         cmsPage: page
+        replace: null
         viewBag:
             isHidden: '0'
             cssClass: ''
