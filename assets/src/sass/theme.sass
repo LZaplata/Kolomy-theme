@@ -10,6 +10,8 @@
 @import "breadcrumbs"
 @import "faq"
 @import "quick-news"
+@import "cookie-bar"
+@import "cookie-settings-modal"
 
 header
     .nav
@@ -72,28 +74,6 @@ header
         &-bullet
             &-active
                 outline: 5px solid $brown-200
-
-#cookies-bar
-    border-radius: 0 !important
-
-    @include media-breakpoint-down(md)
-        left: 20px !important
-
-#sg-settings-modal-cookiesbar
-    .modal-dialog
-        .modal-content
-            padding: 40px
-
-            .modal-header
-                padding: 0
-                border-bottom: none
-
-            .modal-body
-                padding: 0
-
-            .modal-footer
-                padding: 0
-                border-top: none
 
 #o-nas
     .rounded-end-3

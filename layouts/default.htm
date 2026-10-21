@@ -1,5 +1,7 @@
 [seo]
 
+[cookiesConfig cookiesconfig]
+
 [cookiesBar cookiesbar]
 
 [staticMenu mainmenu]
@@ -27,6 +29,8 @@ postPage = "detail-akce-muzeum-krkonos"
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {% component "cookiesconfig" %}
 
         {% component "seo" %}
 

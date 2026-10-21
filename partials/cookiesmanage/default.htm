@@ -1,0 +1,13 @@
+<div id="cookies-manage" class="cookie-manage" data-sg-list-wrap{% if sgManageReload %} data-sg-reload="1"{% endif %}>
+    {% if cookiesSettingsGet("cookies_manage_content") %}
+        <div class="content">
+            {{ cookiesSettingsGet("cookies_manage_content")|raw }}
+        </div>
+    {% endif %}
+
+    {% partial "@cookies-list" %}
+
+    <button type="button" class="btn btn-primary mt-3" data-sg-action="save">
+        {{ "janvince.smallgdpr::lang.settings.form_fields.save_settings"|trans }}
+    </button>
+</div>

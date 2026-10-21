@@ -1,0 +1,32 @@
+// Styles ported from Small GDPR 1.x (assets/cookiesbar/cookiesbar.css), no longer shipped in 2.x
+.cookie-bar
+    position: fixed
+    left: auto
+    bottom: 20px
+    right: 20px
+    max-width: 560px
+    color: black
+    z-index: 1000
+    text-align: left
+    padding: 40px
+    background-color: rgba(255, 255, 255, .95)
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+    border-radius: 0
+
+    @media (max-width: 980px)
+        left: 20px
+        right: 20px
+        padding: 20px
+
+    @include media-breakpoint-down(md)
+        left: 20px
+
+    &__title
+        margin: 0
+
+    &__content
+        margin-top: 15px
+
+    &__buttons
+        @media (max-width: 980px)
+            text-align: center

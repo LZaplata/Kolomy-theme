@@ -1,0 +1,22 @@
+{% if cookiesSettingsGet("cookies")|length %}
+    <div class="cookies-list mt-4">
+        {% for cookie in cookiesSettingsGet("cookies") %}
+            {% set is_checked = (sgCookies[cookie.slug] is defined and sgCookies[cookie.slug]) or cookie.required or (modal and cookie.default_modal_checked) %}
+            {% set input_id = "sg-cookies-" ~ cookie.slug ~ customId %}
+
+            <div class="form-check form-switch ps-0 mb-1">
+                <input class="form-check-input float-none ms-0 opacity-100 me-2 {{ cookie.required ? "disabled" }}" type="checkbox" id="{{ input_id }}" data-sg-cookie="{{ cookie.slug }}" {{ is_checked ? "checked" }} {{ cookie.required ? "disabled" }}>
+
+                <label class="form-check-label fw-bold opacity-100 text-black" for="{{ input_id }}">
+                    {{ cookie.title }}
+                </label>
+            </div>
+
+            {% if cookie.description %}
+                <div class="cookies-list__description help-block mb-3 {{ description_class }}">
+                    {{ cookie.description|raw }}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}

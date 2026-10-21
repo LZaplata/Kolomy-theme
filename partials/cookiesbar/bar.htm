@@ -1,0 +1,31 @@
+<div id="cookies-bar" class="cookie-bar"{% if sgBarReload %} data-sg-reload="1"{% endif %}>
+    {% if cookiesSettingsGet("cookies_bar_title") %}
+        <p class="cookie-bar__title h2 mb-3">
+            {{ cookiesSettingsGet("cookies_bar_title") }}
+        </p>
+    {% endif %}
+
+    {% if cookiesSettingsGet("cookies_bar_content") %}
+        <div class="cookie-bar__content text-dark">
+            {{ cookiesSettingsGet("cookies_bar_content")|raw }}
+        </div>
+    {% endif %}
+
+    <div class="cookie-bar__buttons mt-4 d-grid gap-3 d-sm-flex justify-content-sm-start">
+        <a href="#" class="btn btn-primary btn-sm m-0" data-sg-action="accept">
+            {{ cookiesSettingsGet("btn_accept_label", "Přijmout") }}
+        </a>
+
+        {% if sgRejectShow %}
+            <a href="#" class="btn btn-primary btn-sm m-0" data-sg-action="reject">
+                {{ cookiesSettingsGet("btn_reject_label", "Odmítnout") }}
+            </a>
+        {% endif %}
+
+        {% if sgSettingsShow %}
+            <a href="#sg-settings-modal-{{ __SELF__ }}" class="btn btn-outline-light btn-sm m-0" data-bs-toggle="modal" data-bs-target="#sg-settings-modal-{{ __SELF__ }}">
+                {{ cookiesSettingsGet("btn_settings_label", "Nastavení") }}
+            </a>
+        {% endif %}
+    </div>
+</div>

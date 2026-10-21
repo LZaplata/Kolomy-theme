@@ -1,0 +1,31 @@
+<div class="modal fade cookie-settings-modal" id="sg-settings-modal-{{ __SELF__ }}" tabindex="-1" role="dialog" aria-labelledby="sg-settings-modal-{{ __SELF__ }}" data-sg-list-wrap{% if sgBarReload %} data-sg-reload="1"{% endif %}>
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content cookie-settings-modal__content">
+            <div class="modal-header cookie-settings-modal__header">
+                <p class="modal-title h2 mb-3">
+                    {{ cookiesSettingsGet("cookies_manage_title") }}
+                </p>
+            </div>
+
+            <div class="modal-body cookie-settings-modal__body">
+                {% if cookiesSettingsGet("cookies_manage_content") %}
+                    <div class="content text-dark">
+                        {{ cookiesSettingsGet("cookies_manage_content")|raw }}
+                    </div>
+                {% endif %}
+
+                {% partial "@cookies-list" modal = true customId = "-modal" %}
+            </div>
+
+            <div class="modal-footer cookie-settings-modal__footer mt-2 d-grid gap-3 d-sm-flex justify-content-sm-start">
+                <button type="button" class="btn btn-primary btn-sm m-0" data-sg-action="save" data-bs-dismiss="modal">
+                    {{ "janvince.smallgdpr::lang.settings.form_fields.save_settings"|trans }}
+                </button>
+
+                <button type="button" class="btn btn-outline-light btn-sm m-0" data-bs-dismiss="modal">
+                    Zrušit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
